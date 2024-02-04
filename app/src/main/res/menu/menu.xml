@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/op1"
+        android:title="Crear Evento" />
+    <item
+        android:id="@+id/op2"
+        android:title="Comunicados" />
+    <item
+        android:id="@+id/op3"
+        android:title="Foro Comunitario" />
+    <item
+        android:id="@+id/op4"
+        android:title="Calendario de Eventos" />
+    <item
+        android:id="@+id/op5"
+        android:title="Salir" />
+</menu>

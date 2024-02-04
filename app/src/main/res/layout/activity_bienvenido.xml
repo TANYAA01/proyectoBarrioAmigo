@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:backgroundTint="#00FFFFFF"
+    tools:context=".Bienvenido">
+
+    <!-- Franja de imagen en la parte superior -->
+    <ImageView
+        android:id="@+id/franjaImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="111dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/barra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Icono superpuesto en la franja -->
+
+    <!-- Resto de tu diseño -->
+
+    <ImageView
+        android:id="@+id/iconoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="105dp"
+        android:src="@drawable/marca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/proximaActividadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/franjaImageView">
+
+        <!-- Título "Próxima Actividad" -->
+
+        <TextView
+            android:id="@+id/tituloProximaActividad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|left"
+            android:text="Próxima Actividad"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Recuadro redondeado -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/eventoProximo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/nombreEventoTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del Evento"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/LugarEvento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lugar del Evento"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fechaEventoTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha del Evento"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/HoraEvento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hora del Evento"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- GridLayout para las opciones -->
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="315dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Dos botones en la parte superior -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="163dp"
+            android:layout_gravity="top|center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/crearEvt"
+                android:layout_width="142dp"
+                android:layout_height="114dp"
+                android:layout_marginStart="16dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Botón de evento"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:foregroundTint="#00FFFFFF"
+                android:src="@drawable/crear" />
+
+            <!-- Espacio entre los botones -->
+            <Space
+                android:layout_width="96dp"
+                android:layout_height="23dp" />
+
+            <ImageButton
+                android:id="@+id/crearUser"
+                android:layout_width="142dp"
+                android:layout_height="114dp"
+                android:layout_marginEnd="16dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Botón de crear"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:foregroundTint="#00FFFFFF"
+                android:src="@drawable/registrar" />
+        </LinearLayout>
+
+        <!-- Dos botones en la parte inferior -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/calendar"
+                android:layout_width="142dp"
+                android:layout_height="114dp"
+                android:layout_marginStart="16dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Botón de calendario"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:foregroundTint="#00FFFFFF"
+                android:src="@drawable/calendar" />
+
+            <!-- Espacio entre los botones -->
+            <Space
+                android:layout_width="96dp"
+                android:layout_height="23dp" />
+
+            <ImageButton
+                android:id="@+id/foro"
+                android:layout_width="142dp"
+                android:layout_height="114dp"
+                android:layout_marginEnd="16dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Botón de foro"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:foregroundTint="#00FFFFFF"
+                android:src="@drawable/foro" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="411dp"
+            android:layout_height="160dp"
+            android:layout_gravity="bottom|center"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="130dp"
+                android:layout_height="0dp" />
+
+            <ImageButton
+                android:id="@+id/map"
+                android:layout_width="142dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Botón de mapa"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:foregroundTint="#00FFFFFF"
+                android:src="@drawable/maps" />
+        </LinearLayout>
+
+        <!-- Un botón en el centro -->
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Contenido del RelativeLayout -->
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-4dp"
+            app:backgroundTint="#6E196B"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="#FFFFFF">
+
+            <ImageButton
+                android:id="@+id/notifications"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Botón de notificaciones"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:foregroundTint="#00FFFFFF"
+                android:src="@drawable/not" />
+
+            <ImageButton
+                android:id="@+id/inicio"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|top"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Botón de inicio"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:foregroundTint="#00FFFFFF"
+                android:src="@drawable/home" />
+
+            <ImageButton
+                android:id="@+id/perfil"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|top"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Botón de usuario"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:foregroundTint="#00FFFFFF"
+                android:src="@drawable/usuario" />
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <!-- Botones superpuestos -->
+
+    </RelativeLayout>
+
+
+    <!-- BottomNavigationView para Evento y Usuarios -->
+
+    <!-- BottomNavigationView para Calendario y Foro Comunitario -->
+
+    <!-- BottomNavigationView para Mapas -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

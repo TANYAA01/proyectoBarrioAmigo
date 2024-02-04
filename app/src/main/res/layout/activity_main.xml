@@ -1,0 +1,104 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlanco">
+
+    <!-- Imagen en la Parte Superior -->
+
+    <!-- Área de Datos -->
+
+    <ImageView
+        android:id="@+id/headerImage"
+        android:layout_width="600dp"
+        android:layout_height="400dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/franja" />
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/simbolo" />
+
+    <RelativeLayout
+        android:id="@+id/datosLayout"
+        android:layout_width="match_parent"
+        android:layout_height="463dp"
+        android:layout_below="@id/headerImage"
+        android:layout_marginTop="3dp"
+        android:padding="30dp">
+
+        <!-- Título "INICIAR SESIÓN" -->
+
+        <!-- Campos de Entrada -->
+
+        <TextView
+            android:id="@+id/tituloTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="INICIAR SESIÓN"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#6E196B"
+            android:textSize="26sp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloTextView"
+            android:layout_marginTop="4dp"
+            android:hint="Correo Electrónico / Celular"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/etName"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/psw1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etName"
+            android:layout_marginTop="14dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/psw1"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Botón "Ingresar" -->
+
+        <View
+            android:layout_width="185dp"
+            android:layout_height="2dp"
+            android:layout_below="@id/psw1"
+            android:layout_marginTop="-193dp"
+            android:background="#811F7E" />
+
+        <Button
+            android:id="@+id/btnLog"
+            android:layout_width="373dp"
+            android:layout_height="67dp"
+            android:layout_below="@id/psw1"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="#811F7E"
+            android:text="Ingresar"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

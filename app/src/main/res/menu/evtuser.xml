@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btnEvento"
+        android:icon="@drawable/evento"
+        android:title="Evento"/>
+    <item
+        android:id="@+id/btnUsuarios"
+        android:icon="@drawable/users"
+        android:title="Usuarios"/>
+</menu>

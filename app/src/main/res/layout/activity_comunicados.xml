@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".comunicados">
+
+    <ImageView
+        android:id="@+id/franjaImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="111dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/barra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Icono superpuesto en la franja -->
+
+    <!-- Resto de tu diseño -->
+
+    <ImageView
+        android:id="@+id/iconoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="105dp"
+        android:src="@drawable/marca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="Comunicados Importantes"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextToolsInfo"
+            android:layout_width="match_parent"
+            android:layout_height="436dp"
+            android:gravity="start|top"
+            android:hint="Escribe las herramientas necesarias para el evento..."
+            android:lines="5"
+            android:maxLines="10"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="Enviar a Usuarios" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Contenido del RelativeLayout -->
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-4dp"
+            app:backgroundTint="#6E196B"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="#FFFFFF">
+
+            <ImageButton
+                android:id="@+id/notifications"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Botón de notificaciones"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:foregroundTint="#00FFFFFF"
+                android:src="@drawable/not" />
+
+            <ImageButton
+                android:id="@+id/inicio"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|top"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Botón de inicio"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:foregroundTint="#00FFFFFF"
+                android:src="@drawable/home" />
+
+            <ImageButton
+                android:id="@+id/perfil"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|top"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="Botón de usuario"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                android:foregroundTint="#00FFFFFF"
+                android:src="@drawable/usuario" />
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <!-- Botones superpuestos -->
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "155372828787",
+    "firebase_url": "https://barrioamigo-ef29c-default-rtdb.firebaseio.com",
+    "project_id": "barrioamigo-ef29c",
+    "storage_bucket": "barrioamigo-ef29c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155372828787:android:df1ef176a73bcf0dbb5206",
+        "android_client_info": {
+          "package_name": "com.example.mibarrioamigo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu7xKOodjmERN8ezsljyXPZa23GqohKoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
